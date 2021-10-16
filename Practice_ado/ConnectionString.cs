@@ -16,10 +16,11 @@ namespace Practice_ado
             {
                 using (conn = new SqlConnection(cs))
                 {
-                    string querry = "select * from Employe.Employes";
+                    string querry = "sp_AllEmploy";
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandText = querry;
                     cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
                     SqlDataReader dr= cmd.ExecuteReader();
                     while (dr.Read())
