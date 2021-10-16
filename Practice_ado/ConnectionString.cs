@@ -17,7 +17,9 @@ namespace Practice_ado
                 using (conn = new SqlConnection(cs))
                 {
                     string querry = "select * from Employe.Employes";
-                    SqlCommand cmd = new SqlCommand(querry,conn);
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = querry;
+                    cmd.Connection = conn;
                     conn.Open();
                     SqlDataReader dr= cmd.ExecuteReader();
                     while (dr.Read())
