@@ -33,7 +33,7 @@ namespace Practice_ado
             }
             finally
             {
-
+                conn.Close();
             }
         } 
     }
