@@ -1,0 +1,7 @@
+D:\LocalProject\Practice_ado\Practice_ado\bin\Debug\Practice_ado.exe.config
+D:\LocalProject\Practice_ado\Practice_ado\bin\Debug\Practice_ado.exe
+D:\LocalProject\Practice_ado\Practice_ado\bin\Debug\Practice_ado.pdb
+D:\LocalProject\Practice_ado\Practice_ado\obj\Debug\Practice_ado.csproj.AssemblyReference.cache
+D:\LocalProject\Practice_ado\Practice_ado\obj\Debug\Practice_ado.csproj.CoreCompileInputs.cache
+D:\LocalProject\Practice_ado\Practice_ado\obj\Debug\Practice_ado.exe
+D:\LocalProject\Practice_ado\Practice_ado\obj\Debug\Practice_ado.pdb
