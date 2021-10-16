@@ -16,17 +16,35 @@ namespace Practice_ado
             {
                 using (conn = new SqlConnection(cs))
                 {
-                    string querry = "sp_AllEmploy";
+                    Console.WriteLine("EmployeId");
+                    string id = Console.ReadLine();
+                    Console.WriteLine("EmployeName");
+                    string Name = Console.ReadLine();
+
+                    string qry = "insert into Employe.Employes values(@id,@Name)";
                     SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = querry;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@Name", Name);
+                    cmd.CommandText = qry;
                     cmd.Connection = conn;
-                    cmd.CommandType = CommandType.StoredProcedure;
                     conn.Open();
-                    SqlDataReader dr= cmd.ExecuteReader();
-                    while (dr.Read())
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
                     {
-                        Console.WriteLine("id = " + dr["id"] + " Name = " + dr["Name"]);
+                        Console.WriteLine("data insert successfully");
+                        Console.WriteLine(a);
                     }
+                    else
+                    {
+                        Console.WriteLine("something went wrong...");
+                    }
+                    //string querry = "sp_AllEmploy";
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    //SqlDataReader dr = cmd.ExecuteReader();
+                    //while (dr.Read())
+                    //{
+                    //    Console.WriteLine("id = " + dr["id"] + " Name = " + dr["Name"]);
+                    //}
                 }
             }
             catch (System.Exception)
@@ -38,6 +56,6 @@ namespace Practice_ado
             {
                 conn.Close();
             }
-        } 
+        }
     }
 }
